@@ -5,7 +5,10 @@ from time import sleep
 
 window = pyglet.window.Window()
 image = pyglet.resource.image('nyancat.jpg')
+imageTwo = pyglet.resource.image('black.jpg')
 music = pyglet.resource.media('01_02_Blank Space.wav')
+
+
 @window.event
 def on_draw():
     window.clear()
@@ -17,12 +20,7 @@ def on_mouse_press(x, y, button, modifiers):
         print('The left mouse button was pressed.')
         music.play()
 
-for i in range(3):
-    x=1
-    sleep(5)
-    if x ==1:
-        music.play()
-        pyglet.app.run()
+pyglet.app.run()
 
 
 
